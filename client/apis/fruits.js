@@ -8,3 +8,11 @@ export function getFruits () {
       return res.body.fruits
     })
 }
+
+export function getApiQuotes () {
+  return request
+    .get('/api/v1/quotes')
+    .then(res => {
+      return res.body
+    })
+}
