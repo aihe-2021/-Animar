@@ -1,0 +1,12 @@
+body {
+  height: 99vh;
+  text-align: center;
+  background-image: url('images/background.jpeg');
+}
+
+.board {
+  background-image: url('images/monopoly.jpg');
+  height: 1000px;
+  width: 1000px;
+  text-align: center;
+}
