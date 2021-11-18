@@ -1,52 +1,43 @@
-import React, { useEffect } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React, { useState } from 'react'
+// import { useDispatch, useSelector } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+// import { fetchFruits } from '../actions'
 import { Affirmation } from './Affirmation'
-// import { getApiQuotes } from '../apis/fruits'
+
+const cursors = [
+  'cursor_01.png',
+  'cursor_02.png',
+  'cursor_03.png',
+  'cursor_04.png',
+  'cursor_05.png'
+]
 
 function App () {
-  // const [affirmation, setAffirmation] = useState([])
-  const fruits = useSelector(state => state.fruits)
-  const dispatch = useDispatch()
+  const [cursor, setCursor] = useState('cursor_01.png')
 
-  // useEffect(() => {
-  //   getQuote()
-  // }, [])
+  function handleCursor (newCursor) {
+    setCursor(newCursor)
+    document.body.style.cursor = `url('/images/${newCursor}'), pointer`
+  }
+  console.log(cursor)
 
-  useEffect(() => {
-    dispatch(fetchFruits())
-  }, [])
+  return (<>
+    <div className='app'>
+      <h1>Animar Presents: EDA Monopoly</h1>
+      <h2>Pick Your Playing Piece</h2>
 
-  // function getQuote () {
-  //   getApiQuotes()
-  //     .then(res => {
-  //       const { affirmation } = res
-  //       console.log(res)
-  //       setAffirmation(affirmation)
-  //       return null
-  //     })
-  //     .catch(e => console.log(e.message))
-  // }
-
-  // function reload () {
-  //   getQuote()
-  // }
-
-  return (
-    <>
-      <div className='app'>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
-          {fruits.map(fruit => (
-            <li key={fruit}>{fruit}</li>
-          ))}
-        </ul>
-      </div>
-      <div>
-        <Affirmation />
-      </div>
-    </>
+      <button onClick={() => handleCursor(cursors[0])}><img src="./images/cursor_01.png"/></button>
+      <button onClick={() => handleCursor(cursors[1])}><img src="./images/cursor_02.png"/></button>
+      <button onClick={() => handleCursor(cursors[2])}><img src="./images/cursor_03.png"/></button>
+      <button onClick={() => handleCursor(cursors[3])}><img src="./images/cursor_04.png"/></button>
+      <button onClick={() => handleCursor(cursors[4])}><img src="./images/cursor_05.png"/></button>
+    </div>
+    <div>
+      <Affirmation />
+    </div>
+    <div className="board">
+    </div>
+  </>
   )
 }
 
