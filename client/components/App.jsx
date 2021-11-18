@@ -32,10 +32,10 @@ function App () {
       <button onClick={() => handleCursor(cursors[3])}><img src="./images/cursor_04.png"/></button>
       <button onClick={() => handleCursor(cursors[4])}><img src="./images/cursor_05.png"/></button>
     </div>
-    <div>
-      <Affirmation />
-    </div>
     <div className="board">
+      <div className="quote">
+        <Affirmation />
+      </div>
     </div>
   </>
   )

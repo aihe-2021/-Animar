@@ -1,7 +1,7 @@
 body {
   height: 99vh;
   text-align: center;
-  background-image: url('images/background.jpeg');
+  background-image: url('https://images.pexels.com/photos/301717/pexels-photo-301717.jpeg?cs=srgb&dl=pexels-pixabay-301717.jpg&fm=jpg'); 
 }
 
 .board {
@@ -9,4 +9,14 @@ body {
   height: 1000px;
   width: 1000px;
   text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.quote {
+  padding-top: 150px;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  
 }
