@@ -1,52 +1,51 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+// import { fetchFruits } from '../actions'
 import { Affirmation } from './Affirmation'
-// import { getApiQuotes } from '../apis/fruits'
 
 function App () {
-  // const [affirmation, setAffirmation] = useState([])
-  const fruits = useSelector(state => state.fruits)
-  const dispatch = useDispatch()
+  const [cursor, setCursor] = useState(['cursor_01.png'])
+
+  function handleCursor () {
+    const cursor =
+    [
+      'cursor_01.png',
+      'cursor_02.png',
+      'cursor_03.png',
+      'cursor_04.png',
+      'cursor_05.png'
+    ]
+    setCursor(cursor)
+  }
+
+  // const fruits = useSelector(state => state.fruits)
+  // const dispatch = useDispatch()
 
   // useEffect(() => {
-  //   getQuote()
+  //   dispatch(fetchFruits())
   // }, [])
 
-  useEffect(() => {
-    dispatch(fetchFruits())
-  }, [])
+  return (<>
+    <div className='app' style={cursor}>
+      <h1>Animar Presents: EDA Monopoly</h1>
 
-  // function getQuote () {
-  //   getApiQuotes()
-  //     .then(res => {
-  //       const { affirmation } = res
-  //       console.log(res)
-  //       setAffirmation(affirmation)
-  //       return null
-  //     })
-  //     .catch(e => console.log(e.message))
-  // }
+      <button onClick={() => handleCursor(cursor[0])}><img src="./images/cursor_01.png"/></button>
+      <button onClick={() => handleCursor(cursor[1])}><img src="./images/cursor_02.png"/></button>
+      <button onClick={() => handleCursor(cursor[2])}><img src="./images/cursor_03.png"/></button>
+      <button onClick={() => handleCursor(cursor[3])}><img src="./images/cursor_04.png"/></button>
+      <button onClick={() => handleCursor(cursor[4])}><img src="./images/cursor_05.png"/></button>
 
-  // function reload () {
-  //   getQuote()
-  // }
-
-  return (
-    <>
-      <div className='app'>
-        <h1>Fullstack Boilerplate - with Fruits!</h1>
-        <ul>
+      {/* <ul>
           {fruits.map(fruit => (
             <li key={fruit}>{fruit}</li>
           ))}
-        </ul>
-      </div>
-      <div>
-        <Affirmation />
-      </div>
-    </>
+        </ul> */}
+    </div>
+    <div>
+      <Affirmation />
+    </div>
+  </>
   )
 }
 
