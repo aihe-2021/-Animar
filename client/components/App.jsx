@@ -7,15 +7,15 @@ import { getApiQuotes } from '../apis/fruits'
 function App () {
   const [affirmation, setAffirmation] = useState([])
   const fruits = useSelector(state => state.fruits)
-  // const dispatch = useDispatch()
+  const dispatch = useDispatch()
 
   useEffect(() => {
     getQuote()
   }, [])
 
-  // useEffect(() => {
-  //   dispatch(fetchFruits())
-  // }, [])
+  useEffect(() => {
+    dispatch(fetchFruits())
+  }, [])
 
   function getQuote () {
     getApiQuotes()
