@@ -25,9 +25,9 @@ export function Affirmation () {
 
   return (
     <div>
-      <h1>Affirmation Quotes</h1>
-      <p>{affirmation}</p>
-      <button onClick={reload}>Affirmation</button>
+      <h1>Feeling Stuck?</h1>
+      <button onClick={reload}>I need some motivation please</button>
+      <p>{affirmation}!</p>
     </div>
   )
 }
