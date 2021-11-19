@@ -19,12 +19,13 @@ function App () {
     setCursor(newCursor)
     document.body.style.cursor = `url('/images/${newCursor}'), pointer`
   }
+
   console.log(cursor)
 
   return (<>
     <div className='app'>
       <h1>Animar Presents: EDA Monopoly</h1>
-      <h2>Pick Your Playing Piece</h2>
+      <h2>Pick Your play token</h2>
 
       <button onClick={() => handleCursor(cursors[0])}><img src="./images/cursor_01.png"/></button>
       <button onClick={() => handleCursor(cursors[1])}><img src="./images/cursor_02.png"/></button>
