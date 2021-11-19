@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from 'react'
-import { useDispatch, useSelector } from 'react-redux'
+import React from 'react'
+import { useSelector } from 'react-redux'
+
+// import { fetchCoreConcepts } from '../actions'
 
 export default function CoreConcepts () {
   const concepts = useSelector(state => state.concepts)
-  // console.log(concepts)
 
-  const obj = concepts.map(item => <p key={item}>{item}</p>)
+  const allConcepts = concepts.map(item => <p key={item}>{item}</p>)
   return (<div>
-    {obj}
+    {/* <ul> */}
+    {allConcepts}
+    {/* </ul> */}
   </div>
-
   )
 }

@@ -11,6 +11,7 @@ body {
   text-align: center;
   margin-left: auto;
   margin-right: auto;
+  position: relative;
 }
 
 .quote {
@@ -22,4 +23,129 @@ body {
 
 .app {
   margin-bottom: 1em;
+}
+
+.week-01 {
+  position: absolute;
+  bottom: 40px;
+  right: 180px;
+  background-color: black;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: sans-serif;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.week-02{
+  background-color: #9ebbc9;
+  position: absolute;
+  bottom: 40px;
+  right: 650px;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: sans-serif;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.week-03{
+  position: absolute;
+  background-color: #631b4b;
+  bottom: 250px;
+  left: -20px;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: sans-serif;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  transform: rotate(-90deg);
+}
+
+.week-04{
+  position: absolute;
+  background-color: #b24d31;
+  top: 300px;
+  left: -20px;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: sans-serif;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  transform: rotate(-90deg);
+}
+
+.week-05 {
+  position: absolute;
+  background-color: #a4292e;
+  top: 30px;
+  right: 650px;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: sans-serif;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.week-06{
+  position: absolute;
+  background-color: #f4e749;
+    top: 30px;
+  right: 200px;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: sans-serif;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+}
+
+.week-07{
+  position: absolute;
+  background-color: #487844;
+  top: 300px;
+  right: -30px;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: sans-serif;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  transform: rotate(90deg);
+}
+
+.week-08{
+  position: absolute;
+  background-color: #2a3551;
+  top: 750px; 
+  right: -30px;
+  color: white;
+  padding: 0.5rem 1rem;
+  font-family: sans-serif;
+  border-radius: 5px;
+  border: none;
+  font-size: 1.2rem;
+  transform: rotate(90deg);
+}
+
+.affirmation {
+  color: red;
+  font-size: larger;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h2 {
+  color: black
+}
+
+h1 {
+  color: black
 }

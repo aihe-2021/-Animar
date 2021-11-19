@@ -5,5 +5,5 @@ import conceptsReducer from './coreConcepts'
 
 export default combineReducers({
   fruits,
-  conceptsReducer
+  concepts: conceptsReducer
 })

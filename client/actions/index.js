@@ -31,6 +31,7 @@ export function fetchCoreConcepts (week) {
   return dispatch => {
     return getCoreConcepts(week)
       .then(concepts => {
+        console.log(concepts)
         const conceptsArray = JSON.parse(concepts[0].coreConcepts)
         dispatch(setConcepts(conceptsArray))
         return null

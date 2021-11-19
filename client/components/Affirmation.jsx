@@ -27,7 +27,7 @@ export function Affirmation () {
     <div>
       <h1>Feeling Stuck?</h1>
       <button onClick={reload}>I need some motivation please</button>
-      <p>{affirmation}!</p>
+      <p className="affirmation"><strong>{affirmation}!</strong></p>
     </div>
   )
 }
