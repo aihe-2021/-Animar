@@ -1,37 +1,21 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
-import { fetchFruits } from '../actions'
+import { fetchFruits, fetchCoreConcepts } from '../actions'
 import { Affirmation } from './Affirmation'
-// import { getApiQuotes } from '../apis/fruits'
+import CoreConcepts from './coreConcepts'
 
 function App () {
-  // const [affirmation, setAffirmation] = useState([])
+  const concepts = useSelector(state => state.concepts)
   const fruits = useSelector(state => state.fruits)
   const dispatch = useDispatch()
+  const [week, setWeek] = useState(1)
 
-  // useEffect(() => {
-  //   getQuote()
-  // }, [])
+  console.log(concepts)
 
   useEffect(() => {
     dispatch(fetchFruits())
   }, [])
-
-  // function getQuote () {
-  //   getApiQuotes()
-  //     .then(res => {
-  //       const { affirmation } = res
-  //       console.log(res)
-  //       setAffirmation(affirmation)
-  //       return null
-  //     })
-  //     .catch(e => console.log(e.message))
-  // }
-
-  // function reload () {
-  //   getQuote()
-  // }
 
   return (
     <>
@@ -45,6 +29,12 @@ function App () {
       </div>
       <div>
         <Affirmation />
+      </div>
+      <div>
+        <CoreConcepts />
+      </div>
+      <div>
+        <button onClick={() => dispatch(fetchCoreConcepts(week))}>CLICK ME</button>
       </div>
     </>
   )

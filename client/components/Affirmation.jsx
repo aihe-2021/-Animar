@@ -13,7 +13,6 @@ export function Affirmation () {
     getApiQuotes()
       .then(res => {
         const { affirmation } = res
-        console.log(res)
         setAffirmation(affirmation)
         return null
       })

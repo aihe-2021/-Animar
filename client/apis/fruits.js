@@ -16,3 +16,14 @@ export function getApiQuotes () {
       return res.body
     })
 }
+
+export function getCoreConcepts (week) {
+  // console.log('the week is:', week)
+  return request
+    .get('/api/v1/concepts')
+    .set('week', week)
+    .then(res => {
+      return res.body
+    })
+    .catch(err => console.log(err.message))
+}
